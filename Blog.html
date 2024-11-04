@@ -1,28 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Rusira Sandul</title>
-      <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Blogs</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+      /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Section and Article Styling */
+section {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+article {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for articles */
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+time {
+  display: block;
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 20px;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+      body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+  </style>
 </head>
 <body>
       <div id="header">
-            <div id="container-personal">
-                  <img src="Photos/RUSIRA SANDUL.png" alt="This is The Logo of this site" class="logo">
+            
+            <div id="container">
+                  
+                  
             
                   <nav class="Personal-nav">
+                        <img src="Photos/RUSIRA SANDUL.png" alt="This is The Logo of this site" class="logo">
                        
                         <ul>
                               <li><a href="index.html">Home</a></li>
                               <li><a href="#about">About Me</a></li>
                               <li><a href="#contact">Personal Details</a></li>
                               <li><a href="#blog">Blog</a></li>
-                              <li><a href="personal.html">Contact Me</a></li>
+                              <li><a href="contact.html">Contact Me</a></li>
                         </ul>
                   </nav>
+      <div id="blog">
+            <div class="container">
+                  <h1 class="sub-title">My Blog</h1>
+                  <div class="blog-list">
+                        <div class="blog">
+                        <img src="Photos/OIP.jpeg" alt="Falcun9HeavyBoosterLaunch">
+                        <div class="layer">
+                              <h3>Falcun 9 Heavy</h3>
+                              <p>Falcon Heavy is composed of three reusable Falcon 9 nine-engine cores whose 27 Merlin engines together generate more than 5 million pounds of thrust at liftoff, equal to approximately eighteen 747 aircraft. As one of the world’s most powerful operational rockets, Falcon Heavy can lift nearly 64 metric tons (141,000 lbs) to orbit.
+
+                              </p>
+                              <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                         </div>
                   
+                  <div class="blog">
+                        <img src="Photos/download.jpeg" alt="VegaEVXSriLanka">
+                        <div class="layer">
+                              <h3>CSS</h3>
+                              <p>CSS stands for Cascading Style Sheets.
+
+                                    CSS saves a lot of work. It can control the layout of multiple web pages all at once.
+
+                              </p>
+                              <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+
+                  </div>
+                  <div class="blog">
+                        <img src="Photos/OIP (1).jpeg" alt="HtmlandCss">
+                        <div class="layer">
+                              <h3>Vega EVX</h3>
+                              <p>Fully electric, two seater super car, in a handmade carbon fiber body powered by a dual motor all-wheel-drive drivetrain. All automotive electronics, including the liquid cooled motor controllers and Li-ion battery pack is designed and manufactured in-house, showcasing some of the most advanced technologies in the EV super car space.
+
+                              </p>
+                              <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+
+                  </div>
+                  </div>
+                  <a href="#" class="btn">See More</a>
+            </div>
       </div>
+        <!-- Footer Section -->
+  <footer>
+      <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+      <div class="social-media">
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">Twitter</a> |
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a> |
+        <a href="https://github.com" target="_blank" aria-label="GitHub">GitHub</a>
+      </div>
+      <p>Designed and built with ❤️ by [Your Name]</p>
+    </footer>
+  
       
+  
 </body>
 </html>

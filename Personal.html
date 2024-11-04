@@ -8,21 +8,89 @@
 </head>
 <body>
       <div id="header">
-            <div id="container-personal">
-                  <img src="Photos/RUSIRA SANDUL.png" alt="This is The Logo of this site" class="logo">
+            <div id="container">
+                  
             
                   <nav class="Personal-nav">
+                        <img src="Photos/RUSIRA SANDUL.png" alt="This is The Logo of this site" class="logo">
                        
                         <ul>
                               <li><a href="index.html">Home</a></li>
                               <li><a href="#about">About Me</a></li>
                               <li><a href="#contact">Personal Details</a></li>
                               <li><a href="#blog">Blog</a></li>
-                              <li><a href="personal.html">Contact Me</a></li>
+                              <li><a href="contact.html">Contact Me</a></li>
                         </ul>
                   </nav>
+<!------------about-------->   
+                  <div id="about">
+                        <div class="container-about">
+                              <div class="row">
+                                    <div class="about-col-1">
+                                          <img src="Photos/HWRSandul_yr1.jpg" alt="photo">
+                                    </div>
+                                    <div class="about-col-2">
+                                          <h1 class="sub-title">About Me </h1>
+                                          <p>My Name is Rusira Sandul. <br>Undergraduate at Informatics Institute of Technology, Colombo (IIT)<br> Affiliated with the University of Westminster, London, UK.</p>
+                                          <div class="tab-titles">
+                                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                                <p class="tab-links" onclick="opentab('Education')">Education</p>
+                                                <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                                          </div>
+                                          <div class="tab-content active-tab" id="skills">
+                                                <ul>
+                                                      <li><span>HTML CSS Developeer</span><br>Desighning Web Pages</li>
+                                                      <li><span>Java Developer </span><br>Programming With Java</li>
+                                                      <li><span>Data Base Desighner </span><br>Working With Data Bases</li>
+                                                </ul>
+                                          </div>
+                                          <div class="tab-content" id="Education">
+                                                <ul>
+                                                      <li><span>2012-2022</span><br>Rahula College-Matara</li>
+                                                      <li><span>2023-Present</span><br>Informatics institute of technology</li>
+                                                      <li><span>2024- Present </span><br>University of Sri Jayawardhanapura</li>
+                                                </ul>
+                                          </div>
+                                          <div class="tab-content" id="Experience">
+                                                <ul>
+                                                      <li><span>HTML CSS Developeer</span><br> Fiverr Freelancer </li>
+                                                      <li><span>Java Developer </span><br>Fiverr Freelancer</li>
+                                                      <li><span>Data Base Desighner </span><br>Fiverr Freelancer</li>
+                                                </ul>
+                                          
+                                    </div>
+                              </div>
+
+                        </div>
+                  </div>
                   
       </div>
+        <!-- Footer Section -->
+  <footer>
+      <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+      <div class="social-media">
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">Twitter</a> |
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a> |
+        <a href="https://github.com" target="_blank" aria-label="GitHub">GitHub</a>
+      </div>
+      <p>Designed and built with ❤️ by [Your Name]</p>
+    </footer>
+  
+
+      <script>
+            var tablinks=document.getElementsByClassName('tab-links');
+            var tabcontent=document.getElementsByClassName('tab-content');
+            function opentab(tabname){
+                  for(i=0;i<tabcontent.length;i++){
+                        tabcontent[i].style.display="none";
+                  }
+                  for(i=0;i<tablinks.length;i++){
+                        tablinks[i].className=tablinks[i].className.replace(" active-link","");
+                  }
+                  document.getElementById(tabname).style.display="block";
+                  event.currentTarget.className+=" active-link";
+            }
+      </script>
       
 </body>
 </html>
