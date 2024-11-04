@@ -32,7 +32,7 @@ nav{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0;
+      padding: 1px 10;
       flex-wrap: wrap;
 }
 nav ul li{
@@ -46,6 +46,7 @@ nav ul li a{
       text-decoration: none;
       color: white;
       font-size: 20px;
+      position: relative;
 }
 nav ul li a:hover{
       color: black;
@@ -53,11 +54,133 @@ nav ul li a:hover{
 nav ul li a::after{
       content: '';
       display: block;
-      width: 100%;
+      width: 0;
       height: 3px;
-      background: white;
-      transition: width .3s;
+      background: #ff004f;
+      transition: 0.5s;
       position :absolute;
       left: 0;
       bottom : -10px;
+
 }
+nav ul li a:hover::after{
+      width: 100%;
+      color: black;
+}
+.container-personal{
+      padding: 10px 20px;
+      width: 90%;
+      margin: auto;
+}
+nav .container-personal ul li{
+      display: inline-block;
+      list-style: none;
+      margin: 10px 20px;
+}
+nav .container-personal ul li a{
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      position: relative;
+}
+nav .container-personal ul li a:hover{
+      color: black;
+}
+nav .container-personal ul li a::after{
+      content: '';
+      display: block;
+      width: 0;
+      height: 3px;
+      background: #ff004f;
+      transition: 0.5s;
+      position :absolute;
+      left: 0;
+      bottom : -10px;
+
+}
+nav .container-personal ul li a:hover::after{
+      width: 100%;
+      color: black;
+}
+
+.header-text{
+      margin-top: 20%;
+      font-size: 30px;
+     /**width: 50%;
+      margin: auto;
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 10px;
+      margin-top: 200px;*/
+}
+.header-text h1{
+      color: white;
+      font-size: 50px;
+      margin-top: 20px;
+}
+.header-text h1 span{
+      color:red;
+     
+      margin-top: 20px;
+}
+
+.fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      /*border-radius: 100%;*/
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    
+    .fa-google {
+      background: #dd4b39;
+      color: white;
+    }
+    
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+    
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+    
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+    
+    .fa-pinterest {
+      background: #cb2027;
+      color: white;
+    }
+    
+    .fa-snapchat-ghost {
+      background: #fffc00;
+      color: white;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    
+    .fa-skype {
+      background: #00aff0;
+      color: white;
+    }
