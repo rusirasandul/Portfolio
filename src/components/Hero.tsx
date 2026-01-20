@@ -1,4 +1,6 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import HeroRoboBackground from './HeroRoboBackground';
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -6,15 +8,32 @@ const Hero = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const codeSnippet = `const developer = {
-  name: "Rusira Sandul",
-  focus: ["AI", "Engineering"],
-  mission: "Build scalable software"
-};`;
+  const focusAreas = [
+    "AI Engineer",
+    "Cyber Security",
+    "Full Scale Software Application",
+    "Project Management",
+    "Cloud Architecture",
+    "DevOps Engineering",
+    "Software Development"
+  ];
+
+  const [currentFocus, setCurrentFocus] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFocus((prev) => (prev + 1) % focusAreas.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center section-padding pt-32">
-      <div className="container-width">
+    <section className="relative min-h-screen flex items-center justify-center section-padding pt-32 overflow-hidden">
+      {/* Robot Background */}
+      <HeroRoboBackground />
+      
+      <div className="container-width relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -45,7 +64,7 @@ const Hero = () => {
               transition={{ delay: 0.4 }}
               className="text-xl md:text-2xl text-slate-400 mb-8 leading-relaxed"
             >
-              I build scalable software and explore the intersection of AI and Engineering.
+              I build scalable software and explore the intersection of AI and Software Engineering.
             </motion.p>
             
             <motion.div
@@ -66,6 +85,16 @@ const Hero = () => {
               >
                 Contact Me
               </button>
+              <a
+                href="/Rusira_Sandul_CV.pdf"
+                download
+                className="px-8 py-3 bg-slate-800 border-2 border-slate-700 text-slate-200 hover:bg-slate-700 hover:border-accent font-semibold rounded-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Download CV
+              </a>
             </motion.div>
           </motion.div>
           
@@ -75,15 +104,22 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="hidden md:block"
           >
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 font-mono text-sm">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              </div>
-              <pre className="text-slate-300">
-                <code>{codeSnippet}</code>
-              </pre>
+            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-8 min-h-[200px] flex items-center justify-center">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentFocus}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-center"
+                >
+                  <p className="text-slate-500 text-sm mb-2 font-mono">Focus on</p>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white">
+                    {focusAreas[currentFocus]}
+                  </h3>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </motion.div>
         </div>
