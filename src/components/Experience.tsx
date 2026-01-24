@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Briefcase, Users, Calendar, Award } from 'lucide-react';
+import { Briefcase, Users, Calendar } from 'lucide-react';
 
 interface ExperienceItem {
   id: number;
@@ -127,7 +127,7 @@ const TimelineView: React.FC<TimelineViewProps> = ({ data, icon }) => {
       transition={{ duration: 0.3 }}
       className="space-y-8 pl-4 md:pl-0"
     >
-      {data.map((item, index) => (
+      {data.map((item) => (
         <div key={item.id} className="relative group md:w-3/4 mx-auto border-l-2 border-slate-800 pl-8 pb-8 last:pb-0 last:border-0">
           
           {/* Timeline Node */}

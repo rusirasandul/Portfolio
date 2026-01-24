@@ -1,9 +1,21 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Heart, MessageSquare, Eye, Linkedin, Award, Mic } from 'lucide-react';
+import { Heart, Eye, Linkedin, Award } from 'lucide-react';
+
+interface AchievementPost {
+  id: number;
+  organization: string;
+  category: string;
+  title: string;
+  date: string;
+  content: string;
+  tags: string[];
+  stats: { views: string; likes: string };
+  link: string;
+  icon: React.ReactNode;
+}
 
 // --- DATA: Your Real Achievements ---
-const ACHIEVEMENT_POSTS = [
+const ACHIEVEMENT_POSTS: AchievementPost[] = [
   {
     id: 1,
     organization: "AlgoArena 2025",
@@ -62,7 +74,7 @@ const Achievements = () => {
   );
 };
 
-const AchievementCard = ({ post, index }) => {
+const AchievementCard = ({ post, index }: { post: AchievementPost; index: number }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

@@ -27,7 +27,7 @@ const Hero = () => {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [focusAreas.length]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center section-padding pt-32 overflow-hidden">
