@@ -27,16 +27,35 @@ const Navbar = () => {
     >
       <div className="px-6 md:px-12 lg:px-24 py-2">
         <div className="flex justify-between items-center">
-          <motion.h1
-            className="text-lg font-bold text-white cursor-pointer"
+          <motion.div
+            className="flex items-center gap-3 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            Rusira Sandul
-          </motion.h1>
+            {/* Profile Photo Circle */}
+            <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-cyan-400/50">
+              <img 
+                src="/assets/images/profile.jpg" 
+                alt="Rusira Sandul"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  // Fallback to initials if image doesn't exist
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  target.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className="hidden w-full h-full bg-cyan-500 flex items-center justify-center text-slate-900 text-xs font-bold">
+                RS
+              </div>
+            </div>
+            <h1 className="text-lg font-bold text-white">
+              Rusira Sandul
+            </h1>
+          </motion.div>
           
           <div className="hidden md:flex space-x-6 ml-auto">
-            {['about', 'projects', 'skills', 'contact'].map((item) => (
+            {['about', 'education', 'experience', 'projects', 'achievements', 'skills', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}

@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import HeroRoboBackground from './HeroRoboBackground';
 
 const Hero = () => {
@@ -66,6 +67,49 @@ const Hero = () => {
             >
               I build scalable software and explore the intersection of AI and Software Engineering.
             </motion.p>
+
+            {/* Social Media Badges */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.45 }}
+              className="flex gap-4 mb-8"
+            >
+              <a
+                href="https://github.com/rusirasandul"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-110"
+                aria-label="GitHub"
+              >
+                <Github size={24} />
+              </a>
+              <a
+                href="https://linkedin.com/in/rusirasandul"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-110"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a
+                href="mailto:rusirasandulhw@gmail.com"
+                className="w-12 h-12 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-110"
+                aria-label="Email"
+              >
+                <Mail size={24} />
+              </a>
+              <a
+                href="https://twitter.com/rusirasandul"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-110"
+                aria-label="Twitter"
+              >
+                <Twitter size={24} />
+              </a>
+            </motion.div>
             
             <motion.div
               initial={{ opacity: 0 }}

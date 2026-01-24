@@ -131,6 +131,7 @@ const JarvisBot = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle Jarvis"
         className="bg-slate-900 text-cyan-400 p-4 rounded-full shadow-[0_0_15px_cyan] border border-cyan-400/50 relative group"
       >
         {/* Arc Reactor Glow Effect */}
