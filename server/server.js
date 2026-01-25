@@ -4,6 +4,7 @@ const cors = require('cors');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const resumeData = require('./resumeData');
 
+// JARVIS Backend - AI-powered portfolio assistant
 const app = express();
 app.use(cors());
 app.use(express.json());
