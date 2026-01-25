@@ -114,7 +114,7 @@ const Contact = () => {
                 <h3 className="text-2xl font-semibold mb-6 text-accent">Connect With Me</h3>
                 <div className="space-y-4">
                   <a
-                    href="mailto:rusira@example.com"
+                    href="mailto:rusirasandulhw@gmail.com"
                     className="flex items-center gap-4 text-slate-300 hover:text-accent transition-colors group"
                   >
                     <div className="w-12 h-12 bg-slate-800/50 border border-slate-700 rounded-lg flex items-center justify-center group-hover:border-accent transition-colors">
@@ -122,7 +122,7 @@ const Contact = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <span>rusira@example.com</span>
+                    <span>rusirasandulhw@gmail.com</span>
                   </a>
                   
                   <a
