@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import HeroRoboBackground from './HeroRoboBackground';
+import StarkTechBackground from './StarkTechBackground';
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -31,7 +32,10 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center section-padding pt-32 overflow-hidden">
-      {/* Robot Background */}
+      {/* 1. The Stark Tech Background (Deepest Layer) */}
+      <StarkTechBackground />
+      
+      {/* 2. Robot Background (Middle Layer) */}
       <HeroRoboBackground />
       
       <div className="container-width relative z-10">
@@ -41,14 +45,15 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.p
+            {/* HUD Badge */}
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-accent font-mono text-sm mb-4"
+              className="inline-block mb-4 px-3 py-1 border border-cyan-500/30 rounded-full bg-cyan-950/30 backdrop-blur-md"
             >
-              Hi, I'm
-            </motion.p>
+              <span className="text-cyan-400 text-xs font-mono tracking-widest">EST. 2026 // STARK PROTOCOLS</span>
+            </motion.div>
             
             <motion.h1
               initial={{ opacity: 0 }}
@@ -56,7 +61,7 @@ const Hero = () => {
               transition={{ delay: 0.3 }}
               className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
             >
-              Rusira Sandul
+              Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 filter drop-shadow-[0_0_10px_rgba(6,182,212,0.5)]">Rusira Sandul</span>
             </motion.h1>
             
             <motion.p
@@ -65,7 +70,7 @@ const Hero = () => {
               transition={{ delay: 0.4 }}
               className="text-xl md:text-2xl text-slate-400 mb-8 leading-relaxed"
             >
-              I build scalable software and explore the intersection of AI and Software Engineering.
+              I build scalable software and explore the intersection of <span className="text-amber-500 font-semibold">AI</span> and Engineering.
             </motion.p>
 
             {/* Social Media Badges */}
@@ -117,17 +122,18 @@ const Hero = () => {
               transition={{ delay: 0.5 }}
               className="flex flex-wrap gap-4"
             >
+              {/* Iron Man Styled Buttons */}
               <button
                 onClick={() => scrollToSection('projects')}
-                className="px-8 py-3 bg-accent hover:bg-accent-dark text-slate-900 font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+                className="px-8 py-3 rounded-none skew-x-[-10deg] bg-cyan-600 hover:bg-cyan-500 text-white font-bold transition-all shadow-[0_0_20px_rgba(8,145,178,0.6)] border border-cyan-400"
               >
-                View Work
+                <span className="skew-x-[10deg] inline-block">View Work</span>
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="px-8 py-3 border-2 border-accent text-accent hover:bg-accent hover:text-slate-900 font-semibold rounded-lg transition-all duration-300"
+                className="px-8 py-3 rounded-none skew-x-[-10deg] border border-cyan-500/50 text-cyan-400 hover:bg-cyan-950/50 transition-all hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]"
               >
-                Contact Me
+                <span className="skew-x-[10deg] inline-block">Contact Me</span>
               </button>
               <a
                 href="/Rusira_Sandul_CV.pdf"
