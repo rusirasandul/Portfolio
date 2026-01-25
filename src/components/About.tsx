@@ -149,7 +149,7 @@ const About: React.FC = () => {
               <InfoCard 
                 icon={<Code size={32} className="text-cyan-400" />}
                 title="Core Stack"
-                desc="Python, Java, MERN Stack"
+                desc="Python, Java, Spring Boot, MERN"
               />
               <InfoCard 
                 icon={<Cpu size={32} className="text-purple-400" />}
