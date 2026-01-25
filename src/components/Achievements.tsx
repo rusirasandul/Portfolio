@@ -58,8 +58,6 @@ const Achievements = () => {
 
 // Smart Component that builds the LinkedIn embed URL
 const LinkedInEmbedCard = ({ id, index }: { id: string; index: number }) => {
-// Smart Component that builds the LinkedIn embed URL
-const LinkedInEmbedCard = ({ id, index }: { id: string; index: number }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
