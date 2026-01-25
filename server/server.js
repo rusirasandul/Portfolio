@@ -10,7 +10,7 @@ app.use(express.json());
 
 // Initialize Gemini AI
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 app.post('/api/chat', async (req, res) => {
   try {
@@ -33,7 +33,8 @@ Answer based ONLY on the profile data provided above. Stay in character as JARVI
 
     res.json({ reply: text });
   } catch (error) {
-    console.error('Error:', error);
+    console.error('❌ JARVIS ERROR:', error.message);
+    console.error('Full error:', error);
     res.status(500).json({ 
       reply: "My systems are currently experiencing technical difficulties. Please try again momentarily." 
     });
@@ -45,8 +46,12 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'JARVIS systems operational' });
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`🤖 JARVIS Backend Server running on port ${PORT}`);
-  console.log(`📡 API endpoint: http://localhost:${PORT}/api/chat`);
-});
+// Vercel serverless deployment - export the app instead of listening
+module.exports = app;
+
+// For local development, uncomment this:
+// const PORT = process.env.PORT || 5000;
+// app.listen(PORT, () => {
+//   console.log(`🤖 JARVIS Backend Server running on port ${PORT}`);
+//   console.log(`📡 API endpoint: http://localhost:${PORT}/api/chat`);
+// });
