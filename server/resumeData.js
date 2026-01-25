@@ -143,7 +143,7 @@ Beyond technical skills, Mr. Sandul is deeply involved in student leadership, se
 His interests include exploring cutting-edge technologies, contributing to open-source projects, and building scalable applications that solve real-world problems.
 
 CONTACT:
-- Email: rusira@example.com
+- Email: rusirasandulhw@gmail.com
 - GitHub: https://github.com/rusirasandul
 - LinkedIn: https://linkedin.com/in/rusirasandul
 - Portfolio: Live with JARVIS AI Assistant
