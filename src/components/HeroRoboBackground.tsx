@@ -32,7 +32,7 @@ const HeroRoboBackground = () => {
   const eyesY = useTransform(mouseY, [-window.innerHeight / 2, window.innerHeight / 2], [-25, 25]);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none flex items-center justify-center z-0 opacity-30 md:opacity-50">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none flex items-center justify-center z-[1] opacity-30 md:opacity-50">
       <svg
         width="500"
         height="500"
