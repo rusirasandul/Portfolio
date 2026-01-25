@@ -67,7 +67,7 @@ const LinkedInEmbedCard = ({ id, index }: { id: string; index: number }) => {
       className="rounded-xl overflow-hidden shadow-lg border border-slate-800 bg-white hover:shadow-[0_0_20px_rgba(0,119,181,0.3)] transition-all"
     >
       <iframe 
-        src={`https://www.linkedin.com/embed/feed/update/urn:li:share:${id}`}
+        src={`https://www.linkedin.com/embed/feed/update/urn:li:activity:${id}`}
         height="550"
         width="100%" 
         frameBorder="0" 
