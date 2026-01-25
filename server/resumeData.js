@@ -124,8 +124,34 @@ ARCHIVE PROJECTS:
    - Tech Stack: Python, Scikit-learn, Pandas, Flask
 
 ACHIEVEMENTS & RECOGNITION:
-1. AlgoArena Co-Chair - Co-founded inter-university coding competition platform, successfully organized multiple events with 200+ participants
-2. Beauty of Cloud Project Chairperson - Led cloud computing initiative, conducted workshops reaching 100+ students
+1. AlgoArena 2025 - Project Co-Chair
+   Led AlgoArena 2025, an Inter-University Mobile App Development Competition organized by the Leo Club of University of Sri Jayewardenepura in partnership with IEEE CS Student Branch Chapter. 
+   - Successfully concluded after 5-month journey with 600+ university students participating
+   - Organized 4 industry-led workshops, ideathon phase, inter-university competition, and grand mobile app launching ceremony
+   - Gained invaluable exposure to leadership, coordination, teamwork, and large-scale project execution
+   - Worked under guidance of Project Coordinating Director Dedunu Thakshila and alongside Project Co-Chair Chamathka Dilshani
+   - Distinguished speakers and judges: Dr. Surani Tissera, Mr. Suresh Michael Peiris, Mr. Kushan Bhareti, Mr. Sabilashan Ganeshan, Mr. Kavimal Wijewardana, Mr. Thameera Dananjaya, Mr. Prabhash Pramodha
+
+2. Beauty of Cloud - Project Co-Chair
+   Led the first-ever student-led Cloud Hackathon in Sri Lanka alongside Co-Chairperson Manuja Wimalarathne.
+   - Hosted inter-university ideathon on August 17, 2025, bringing young innovators together to explore cloud computing possibilities
+   - Started in February with the challenge of creating something unprecedented in Sri Lanka
+   - Distinguished judges panel: Mr. Chameera Dulanga, Mr. Lakindu Hewawasam (AWS User Group Colombo), Mr. Nimesha Jinarajadasa, Mr. Harsha Weerasinghe, Mr. Prasad Srimal, Mr. Tharindu Kalhara (CoDeKu DevOps Academy)
+   - Project advisor: Mr. Lakshan Madhushanka, Lecturer at Faculty of Engineering and Captor Advisor at IEEE CS Student Branch
+   - Event empowered students to push boundaries, solve real-world problems, and spark innovation around cloud technologies
+   - Not just a competition, but a movement to empower the next generation of cloud leaders
+
+3. LaunchPad 3.0 Participant
+   Attended career development event organized by AIESEC in University of Sri Jayewardenepura.
+   - Gained valuable insights into career development, global internships, and effective leadership
+   - Learned from industry leaders: Mr. Dilupa Pathirana (CEO, Barista Coffee Company Limited), Mrs. Pabasari Galagoda Wijesinha (Deputy GM HR, Noyon Lanka), Mr. Dharshana De Silva (Assistant Group GM, Prima Group Sri Lanka), Ms. Yanika Amarasekera-Siyaguna (Founder Silver Aisle, Forbes 30 Under 30 Asia Honoree)
+   - Received invaluable advice from Mr. Sampath Soysa (CEO) on developing Resume and LinkedIn profile
+
+4. PIXEL+ Workshop Conductor
+   Successfully conducted LinkedIn and Generative AI Workshops organized by Leo Club of University of Sri Jayewardenepura.
+   - Session topics: Optimizing LinkedIn profiles for professional growth, Leveraging Generative AI (ChatGPT) for creativity and productivity
+   - Inspired by experts: Mr. Sanjaya Elvitigala, Mr. Uditha Bandara (MVP), Mr. Samitha Thilakarathna
+   - Focused on helping participants innovate, elevate, and enhance their professional journeys
 
 TECHNICAL DNA:
 - Core Stack: MERN (MongoDB, Express, React, Node.js), TypeScript, Tailwind CSS
