@@ -28,7 +28,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding bg-slate-950" style={{
+      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill-rule='evenodd' stroke='%2306b6d4' fill='none' stroke-opacity='0.05'/%3E%3C/svg%3E")`,
+      backgroundSize: '60px 60px'
+    }}>
       <div className="container-width">
         <motion.div
           ref={ref}

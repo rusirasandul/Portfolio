@@ -44,7 +44,10 @@ const ACHIEVEMENT_POSTS: AchievementPost[] = [
 
 const Achievements = () => {
   return (
-    <section id="achievements" className="py-20 bg-slate-950 text-slate-200 relative overflow-hidden">
+    <section id="achievements" className="py-20 bg-slate-950 text-slate-200 relative overflow-hidden" style={{
+      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill-rule='evenodd' stroke='%2306b6d4' fill='none' stroke-opacity='0.05'/%3E%3C/svg%3E")`,
+      backgroundSize: '60px 60px'
+    }}>
       
       {/* Background Decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none"></div>
