@@ -4,11 +4,8 @@ import { Linkedin } from 'lucide-react';
 // --- YOUR LINKEDIN POST IDs (Extracted from URLs) ---
 const POST_IDS = [
   "7418240089471778816", // AlgoArena 2025
-  "7411647941859409920", // Microservice Architecture
-  "7393569725726932992", // UniSync Project
   "7391081779711033344", // Aurora 2025
   "7365634360898695169", // Beauty of Cloud Hackathon
-  "7353680159054467073", // New Position
   "7328475828961378304", // IEEE USJ
   "7308171524920745984", // Pixel Event
   "7306509454324219905", // Cyber Summit 25
