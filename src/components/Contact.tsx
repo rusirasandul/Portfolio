@@ -143,7 +143,7 @@ const Contact = () => {
                   </a>
                   
                   <a
-                    href="https://linkedin.com/in/rusirasandul"
+                    href="https://www.linkedin.com/in/rusira-sandul-b6bb87292"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 text-slate-300 hover:text-accent transition-colors group"

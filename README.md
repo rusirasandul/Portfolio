@@ -243,7 +243,7 @@ Software Engineer & Computer Science Undergraduate at University of Sri Jayeward
 **Contact**:
 - Email: rusirasandulhw@gmail.com
 - GitHub: [github.com/rusirasandul](https://github.com/rusirasandul)
-- LinkedIn: [linkedin.com/in/rusirasandul](https://linkedin.com/in/rusirasandul)
+- LinkedIn: [linkedin.com/in/rusira-sandul-b6bb87292](https://www.linkedin.com/in/rusira-sandul-b6bb87292)
 
 ## 🎯 Key Features Explained
 

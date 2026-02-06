@@ -171,7 +171,7 @@ His interests include exploring cutting-edge technologies, contributing to open-
 CONTACT:
 - Email: rusirasandulhw@gmail.com
 - GitHub: https://github.com/rusirasandul
-- LinkedIn: https://linkedin.com/in/rusirasandul
+- LinkedIn: https://www.linkedin.com/in/rusira-sandul-b6bb87292
 - Portfolio: Live with JARVIS AI Assistant
 
 TONE AND STYLE:

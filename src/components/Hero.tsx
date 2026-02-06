@@ -90,7 +90,7 @@ const Hero = () => {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com/in/rusirasandul"
+                href="https://www.linkedin.com/in/rusira-sandul-b6bb87292"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-110"
