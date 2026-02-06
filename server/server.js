@@ -6,7 +6,10 @@ const resumeData = require('./resumeData');
 
 // JARVIS Backend - AI-powered portfolio assistant
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ['https://www.rusirasandul.online', 'https://rusirasandul.online', 'http://localhost:5173'],
+  credentials: true
+}));
 app.use(express.json());
 
 // Initialize Gemini AI
