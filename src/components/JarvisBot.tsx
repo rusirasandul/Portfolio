@@ -37,7 +37,7 @@ const JarvisBot = () => {
 
     try {
       // 3. Call your Node Backend
-      const response = await fetch('https://www.rusirasandul.online/api/chat', {
+      const response = await fetch('https://portfolio-ffqi.vercel.app/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userMessage })
