@@ -89,10 +89,10 @@ const VOLUNTEERING_DATA: ExperienceItem[] = [
   },
   {
     id: 6,
-    role: "Head of Finance",
+    role: "Head of Finance - 4score 7.0 Project",
     company: "Rotaract Club of USJ",
     period: "Mar 2025 - May 2025",
-    description: "Oversaw financial planning and fund management for club projects and community service initiatives.",
+    description: "Oversaw financial planning and fund management for the 4score 7.0 project. Led budgeting, resource allocation, and financial reporting for club projects and community service initiatives.",
     color: "slate"
   },
   {

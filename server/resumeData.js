@@ -73,8 +73,9 @@ LEADERSHIP & VOLUNTEERING:
    - Organized industry talks and networking events
    - Contributed to student community development
 
-7. Rotaract Club of USJ - Head of Finance (Mar 2025 - May 2025)
-   - Oversaw financial planning and fund management for club projects
+7. Rotaract Club of USJ - Head of Finance - 4score 7.0 Project (Mar 2025 - May 2025)
+   - Oversaw financial planning and fund management for the 4score 7.0 project
+   - Led budgeting, resource allocation, and financial reporting
    - Managed community service initiatives
 
 8. Leo Club of USJ - Member
