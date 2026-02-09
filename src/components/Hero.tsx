@@ -136,8 +136,9 @@ const Hero = () => {
                 <span className="skew-x-[10deg] inline-block">Contact Me</span>
               </button>
               <a
-                href="/Rusira_Sandul_CV.pdf"
-                download
+                href="https://drive.google.com/uc?export=download&id=1AbrJIpB2iDbGgaHt47ydIMS1ytyLdPCz"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-3 bg-slate-800 border-2 border-slate-700 text-slate-200 hover:bg-slate-700 hover:border-accent font-semibold rounded-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

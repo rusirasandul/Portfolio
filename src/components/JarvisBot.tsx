@@ -76,7 +76,7 @@ const JarvisBot = () => {
                 <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_8px_cyan]"></div>
                 <span className="text-cyan-400 font-mono text-sm tracking-widest uppercase font-bold">J.A.R.V.I.S</span>
               </div>
-              <button onClick={() => setIsOpen(false)} className="text-cyan-600 hover:text-cyan-400 transition-colors">
+              <button onClick={() => setIsOpen(false)} className="text-cyan-600 hover:text-cyan-400 transition-colors" aria-label="Close Jarvis chat">
                 <X size={18} />
               </button>
             </div>
@@ -118,6 +118,7 @@ const JarvisBot = () => {
               <button 
                 onClick={handleSend}
                 className="bg-cyan-900/30 hover:bg-cyan-800/50 text-cyan-400 p-2 rounded border border-cyan-700/50 transition-all"
+                aria-label="Send message"
               >
                 <Send size={18} />
               </button>

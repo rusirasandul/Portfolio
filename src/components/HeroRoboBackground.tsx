@@ -47,7 +47,7 @@ const HeroRoboBackground = () => {
           <rect x="150" y="280" width="200" height="180" rx="40" fill="#1e293b" stroke="#334155" strokeWidth="4"/>
           {/* Chest Detail Arc Reactor */}
           <circle cx="250" cy="370" r="30" fill="#0f172a" stroke="#06b6d4" strokeWidth="3" className="animate-pulse"/>
-          <circle cx="250" cy="370" r="15" fill="#06b6d4" style={{ filter: 'blur(2px)' }}/>
+          <circle cx="250" cy="370" r="15" fill="#06b6d4" className="svg-blur"/>
           {/* Neck connection */}
           <rect x="225" y="250" width="50" height="40" fill="#334155" />
         </g>
@@ -69,9 +69,9 @@ const HeroRoboBackground = () => {
             <rect x="165" y="140" width="170" height="70" rx="35" fill="#0f172a" />
             
             {/* Left Eye (Glowing) */}
-            <circle cx="210" cy="175" r="18" fill="#22d3ee" style={{ filter: 'drop-shadow(0 0 15px rgba(34,211,238,0.8))' }}/>
+            <circle cx="210" cy="175" r="18" fill="#22d3ee" className="svg-eye-glow"/>
             {/* Right Eye (Glowing) */}
-            <circle cx="290" cy="175" r="18" fill="#22d3ee" style={{ filter: 'drop-shadow(0 0 15px rgba(34,211,238,0.8))' }}/>
+            <circle cx="290" cy="175" r="18" fill="#22d3ee" className="svg-eye-glow"/>
             
             {/* Little reflections in eyes */}
             <circle cx="216" cy="168" r="5" fill="white" opacity="0.8"/>

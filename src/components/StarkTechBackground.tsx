@@ -5,13 +5,7 @@ const StarkTechBackground = () => {
     <div className="absolute inset-0 overflow-hidden bg-slate-950 pointer-events-none z-0">
       
       {/* --- LAYER 1: The Hexagon Grid (The "Armor" Texture) --- */}
-      <div 
-        className="absolute inset-0 opacity-[0.08]" 
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill-rule='evenodd' stroke='%2306b6d4' fill='none'/%3E%3C/svg%3E")`,
-          backgroundSize: '60px 60px'
-        }}
-      ></div>
+      <div className="absolute inset-0 opacity-[0.08] hexagon-bg"></div>
 
       {/* --- LAYER 2: The Arc Reactor (Bottom Right) --- */}
       {/* This sits behind your chatbot but adds that "Powered" feel */}

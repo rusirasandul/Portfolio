@@ -4,10 +4,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-950 border-t border-slate-900 pt-16 pb-8 text-slate-400 font-sans relative z-10" style={{
-      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill-rule='evenodd' stroke='%2306b6d4' fill='none' stroke-opacity='0.05'/%3E%3C/svg%3E")`,
-      backgroundSize: '60px 60px'
-    }}>
+    <footer className="bg-slate-950 border-t border-slate-900 pt-16 pb-8 text-slate-400 font-sans relative z-10 hexagon-bg">
       <div className="container mx-auto px-6">
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
@@ -38,7 +35,7 @@ const Footer = () => {
               <li><FooterLink href="#about">About Me</FooterLink></li>
               <li><FooterLink href="#projects">Projects</FooterLink></li>
               <li><FooterLink href="#achievements">Achievements</FooterLink></li>
-              <li><FooterLink href="/Rusira_Sandul_CV.pdf">Download CV</FooterLink></li>
+              <li><a href="https://drive.google.com/uc?export=download&id=1AbrJIpB2iDbGgaHt47ydIMS1ytyLdPCz" target="_blank" rel="noopener noreferrer" className="block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">Download CV</a></li>
             </ul>
           </div>
 
