@@ -57,6 +57,14 @@ const PROFESSIONAL_DATA: ExperienceItem[] = [
 const VOLUNTEERING_DATA: ExperienceItem[] = [
   {
     id: 1,
+    role: "Chairperson",
+    company: "IEEE Computer Society - USJ Student Branch",
+    period: "Feb 2026 - Present",
+    description: "Leading the IEEE Computer Society Student Branch at University of Sri Jayewardenepura. Spearheading technical initiatives, organizing workshops, and fostering innovation in the student tech community.",
+    color: "purple"
+  },
+  {
+    id: 2,
     role: "University Ambassador",
     company: "G17 Global",
     period: "Jul 2025 - Present",
@@ -64,7 +72,7 @@ const VOLUNTEERING_DATA: ExperienceItem[] = [
     color: "purple"
   },
   {
-    id: 2,
+    id: 3,
     role: "Treasurer - Aurora 2026",
     company: "Computer Science Association (USJ)",
     period: "Nov 2025 - Present",
@@ -72,7 +80,7 @@ const VOLUNTEERING_DATA: ExperienceItem[] = [
     color: "purple"
   },
   {
-    id: 3,
+    id: 4,
     role: "Co-Chairperson",
     company: "AlgoArena 1.0",
     period: "Aug 2025 - Jan 2026",
@@ -80,15 +88,7 @@ const VOLUNTEERING_DATA: ExperienceItem[] = [
     color: "purple"
   },
   {
-    id: 4,
-    role: "Industry Relation Committee Member",
-    company: "IEEE CS Student Branch (USJ)",
-    period: "Jan 2025 - Present",
-    description: "Bridging the gap between the university student body and industry professionals. Organizing industry talks and networking events.",
-    color: "purple"
-  },
-  {
-    id: 5,
+    id: 6,
     role: "Head of Finance",
     company: "Rotaract Club of USJ",
     period: "Mar 2025 - May 2025",
@@ -96,7 +96,15 @@ const VOLUNTEERING_DATA: ExperienceItem[] = [
     color: "slate"
   },
   {
-    id: 6,
+    id: 7,
+    role: "Project Chairperson",
+    company: "Beauty of Cloud 1.0",
+    period: "Feb 2025 - Aug 2025",
+    description: "Directed a cloud computing awareness project under the IEEE CS Student Branch. Created educational content and organized workshops.",
+    color: "slate"
+  },
+  {
+    id: 8,
     role: "Project Chairperson",
     company: "Beauty of Cloud 1.0",
     period: "Feb 2025 - Aug 2025",

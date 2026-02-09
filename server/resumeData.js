@@ -43,34 +43,43 @@ PROFESSIONAL EXPERIENCE:
    - Technologies: MERN Stack, TypeScript, Cloud Deployment
 
 LEADERSHIP & VOLUNTEERING:
-1. AlgoArena - Co-Chair
+1. IEEE Computer Society - Chairperson
+   - Leading the IEEE Computer Society Student Branch at University of Sri Jayewardenepura (Feb 2026 - Present)
+   - Spearheading technical initiatives, organizing workshops, and fostering innovation in the student tech community
+   - Managing technical events, industry collaborations, and student development programs
+
+2. AlgoArena - Co-Chair
    - Co-founded and organized inter-university coding competitions
    - Led technical team and mentored participants
    - Managed event logistics and sponsorships
 
-2. Aurora 2026 - Technical Lead
-   - Led technical infrastructure for conference on social engineering and agentic AI
-   - Coordinated with speakers and managed event platform
-   - Built registration and session management systems
+3. Aurora 2026 - Treasurer
+   - Managing finances and logistics for the Aurora 2026 conference
+   - Leading the budgeting and resource allocation for this major university event
+   - Conference focused on social engineering and agentic AI
 
-3. G17 - Project Lead
-   - Spearheaded technology initiatives and team coordination
-   - Delivered multiple successful projects under tight deadlines
+4. G17 Global - University Ambassador
+   - Representing USJ for Industry, Innovation, and Infrastructure (SDG 9)
+   - Promoting sustainable development goals
+   - Spearheading technology initiatives and team coordination
 
-4. Beauty of Cloud Project - Project Chairperson
-   - Led cloud computing awareness and education initiative
+5. Beauty of Cloud Project - Project Chairperson
+   - Led first-ever student-led Cloud Hackathon in Sri Lanka
    - Organized workshops and training sessions for students
+   - Directed cloud computing awareness project under IEEE CS Student Branch
 
-5. IEEE Student Branch USJ - Committee Member
-   - Organized technical workshops and hackathons
+6. IEEE CS Student Branch USJ - Industry Relation Committee Member (Jan 2025 - Feb 2026)
+   - Bridged the gap between university student body and industry professionals
+   - Organized industry talks and networking events
    - Contributed to student community development
 
-6. Rotaract Club of USJ - Active Member
-   - Participated in community service projects
-   - Collaborated on social impact initiatives
+7. Rotaract Club of USJ - Head of Finance (Mar 2025 - May 2025)
+   - Oversaw financial planning and fund management for club projects
+   - Managed community service initiatives
 
-7. Leo Club of USJ - Member
+8. Leo Club of USJ - Member
    - Engaged in youth leadership and service activities
+   - Active member contributing to community service and leadership development
 
 FLAGSHIP PROJECTS:
 1. Enterprise Event Management System
@@ -164,7 +173,7 @@ Mr. Sandul is pursuing a unique dual-degree path, simultaneously earning BSc (Ho
 
 He specializes in full-stack development with the MERN stack and has a strong passion for AI/ML integration, cloud architecture, and cybersecurity. His experience spans from building enterprise-scale event management systems to healthcare applications, demonstrating versatility across domains.
 
-Beyond technical skills, Mr. Sandul is deeply involved in student leadership, serving as Co-Chair of AlgoArena and holding positions in IEEE, Rotaract, and Leo Club. He believes in learning by building and sharing knowledge with the community.
+Beyond technical skills, Mr. Sandul is deeply involved in student leadership, currently serving as Chairperson of IEEE Computer Society at USJ (since Feb 2026), and has held key positions including Co-Chair of AlgoArena, Treasurer of Aurora 2026, and roles in Rotaract and Leo Club. He believes in learning by building and sharing knowledge with the community.
 
 His interests include exploring cutting-edge technologies, contributing to open-source projects, and building scalable applications that solve real-world problems.
 
