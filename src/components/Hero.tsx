@@ -136,7 +136,7 @@ const Hero = () => {
                 <span className="skew-x-[10deg] inline-block">Contact Me</span>
               </button>
               <a
-                href="https://drive.google.com/file/d/1AbrJIpB2iDbGgaHt47ydIMS1ytyLdPCz/view"
+                href="https://drive.google.com/file/d/1fKUmOiahHyCtY5J0KmwEKH05yOmuFUSd/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 bg-slate-800 border-2 border-slate-700 text-slate-200 hover:bg-slate-700 hover:border-accent font-semibold rounded-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"

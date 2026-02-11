@@ -137,7 +137,7 @@ const About: React.FC = () => {
                 Let's Connect
               </a>
               <a 
-                href="https://drive.google.com/file/d/1AbrJIpB2iDbGgaHt47ydIMS1ytyLdPCz/view"
+                href="https://drive.google.com/file/d/1fKUmOiahHyCtY5J0KmwEKH05yOmuFUSd/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 border border-slate-700 text-slate-300 hover:border-cyan-500 hover:text-cyan-400 rounded-md transition-all"

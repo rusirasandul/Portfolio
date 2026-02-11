@@ -35,7 +35,7 @@ const Footer = () => {
               <li><FooterLink href="#about">About Me</FooterLink></li>
               <li><FooterLink href="#projects">Projects</FooterLink></li>
               <li><FooterLink href="#achievements">Achievements</FooterLink></li>
-              <li><a href="https://drive.google.com/file/d/1AbrJIpB2iDbGgaHt47ydIMS1ytyLdPCz/view" target="_blank" rel="noopener noreferrer" className="block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">Download CV</a></li>
+              <li><a href="https://drive.google.com/file/d/1fKUmOiahHyCtY5J0KmwEKH05yOmuFUSd/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">Download CV</a></li>
             </ul>
           </div>
 
