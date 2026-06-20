@@ -222,7 +222,7 @@ Get your Gemini API key from [Google AI Studio](https://makersuite.google.com/ap
 
 ## 👤 About Me
 
-Software Engineer & Computer Science Undergraduate at University of Sri Jayewardenepura
+Software Engineer & BSc Physical Science Undergraduate at University of Sri Jayewardenepura
 
 **Specializations** (rotating in hero section):
 - AI Engineer

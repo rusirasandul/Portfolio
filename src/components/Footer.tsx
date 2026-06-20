@@ -1,59 +1,84 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+
+const CV_URL =
+  'https://drive.google.com/file/d/1fKUmOiahHyCtY5J0KmwEKH05yOmuFUSd/view?usp=sharing';
+
+const SOCIALS = [
+  { href: 'https://github.com/rusirasandul', icon: Github, label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/rusira-sandul-b6bb87292', icon: Linkedin, label: 'LinkedIn' },
+  { href: 'mailto:rusirasandulhw@gmail.com', icon: Mail, label: 'Email' },
+];
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const openAssistant = () => {
+    const btn = document.querySelector(
+      'button[aria-label="Toggle Jarvis"]'
+    ) as HTMLButtonElement | null;
+    btn?.click();
+  };
+
   return (
-    <footer className="bg-slate-950 border-t border-slate-900 pt-16 pb-8 text-slate-400 font-sans relative z-10 hexagon-bg">
-      <div className="container mx-auto px-6">
-        
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          
-          {/* Column 1: Identity */}
-          <div className="md:col-span-2">
-            <h2 className="text-2xl font-bold text-slate-100 mb-4">
-              RS<span className="text-cyan-500">.</span>
-            </h2>
-            <p className="text-slate-400 mb-6 max-w-sm leading-relaxed">
-              Rusira Sandul <br />
-              <span className="text-slate-500 text-sm">
-                Software Engineer & Computer Science Undergraduate (USJ). 
-                Building AI-powered solutions and exploring the future of Cyber Security.
+    <footer className="relative border-t border-white/[0.06] pt-16 pb-8">
+      <div className="container-width px-5 sm:px-8">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
+          <div className="col-span-2">
+            <div className="flex items-center gap-2.5">
+              <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-accent to-iris text-sm font-bold text-white">
+                RS
               </span>
+              <span className="font-display text-lg font-semibold text-white">Rusira Sandul</span>
+            </div>
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-zinc-500">
+              Software Engineer &amp; BSc Physical Science undergraduate (USJ). Building
+              AI-powered solutions and exploring the future of cyber security.
             </p>
-            <div className="flex gap-4">
-              <SocialLink href="https://github.com/rusirasandul" icon={<Github size={20} />} />
-              <SocialLink href="https://www.linkedin.com/in/rusira-sandul-b6bb87292" icon={<Linkedin size={20} />} />
-              <SocialLink href="mailto:rusirasandulhw@gmail.com" icon={<Mail size={20} />} />
+            <div className="mt-5 flex gap-3">
+              {SOCIALS.map(({ href, icon: Icon, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/[0.03] text-zinc-400 transition-all hover:-translate-y-1 hover:border-accent/50 hover:text-accent-light"
+                >
+                  <Icon size={18} />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
           <div>
-            <h3 className="text-slate-100 font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-4 text-sm">
+            <h3 className="mb-4 font-display text-sm font-semibold text-white">Quick Links</h3>
+            <ul className="space-y-3 text-sm">
               <li><FooterLink href="#about">About Me</FooterLink></li>
               <li><FooterLink href="#projects">Projects</FooterLink></li>
-              <li><FooterLink href="#achievements">Achievements</FooterLink></li>
-              <li><a href="https://drive.google.com/file/d/1fKUmOiahHyCtY5J0KmwEKH05yOmuFUSd/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">Download CV</a></li>
+              <li><FooterLink href="#achievements">Live Feed</FooterLink></li>
+              <li>
+                <a
+                  href={CV_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-500 transition-colors hover:text-accent-light"
+                >
+                  Download CV
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* Column 3: Resources */}
           <div>
-            <h3 className="text-slate-100 font-semibold mb-6">Resources</h3>
-            <ul className="space-y-4 text-sm">
+            <h3 className="mb-4 font-display text-sm font-semibold text-white">Resources</h3>
+            <ul className="space-y-3 text-sm">
               <li><FooterLink href="#skills">Tech Skills</FooterLink></li>
-              {/* This link triggers the JARVIS bot */}
               <li>
-                <button 
-                  onClick={() => {
-                    const jarvisButton = document.querySelector('button[aria-label="Toggle Jarvis"]') as HTMLButtonElement;
-                    jarvisButton?.click();
-                  }}
-                  className="hover:text-cyan-400 transition-colors text-left hover:translate-x-1 transition-all duration-300"
+                <button
+                  onClick={openAssistant}
+                  className="text-left text-zinc-500 transition-colors hover:text-accent-light"
                 >
-                  Ask JARVIS AI
+                  Ask the AI Assistant
                 </button>
               </li>
               <li><FooterLink href="#contact">Contact</FooterLink></li>
@@ -61,37 +86,24 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600">
-          <p>© {currentYear} Rusira Sandul. All rights reserved.</p>
-          <div className="flex gap-8">
-            <a href="#" className="hover:text-cyan-500 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-cyan-500 transition-colors">Terms of Service</a>
-          </div>
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 text-xs text-zinc-600 sm:flex-row">
+          <p>© {currentYear} Rusira Sandul. Crafted with care.</p>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-zinc-400 transition-all hover:border-accent/40 hover:text-accent-light"
+          >
+            Back to top
+            <ArrowUp size={14} />
+          </button>
         </div>
       </div>
     </footer>
   );
 };
 
-// Helper Components for clean code
 const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <a 
-    href={href} 
-    className="block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300"
-  >
+  <a href={href} className="text-zinc-500 transition-colors hover:text-accent-light">
     {children}
-  </a>
-);
-
-const SocialLink = ({ href, icon }: { href: string; icon: React.ReactNode }) => (
-  <a 
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 hover:bg-cyan-500/10 hover:text-cyan-400 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300"
-  >
-    {icon}
   </a>
 );
 

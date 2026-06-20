@@ -1,13 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Github, ExternalLink, Folder, Layers, Database, Cpu, Globe } from 'lucide-react';
-
-interface ProjectLinks {
-  github: string;
-  live: string;
-}
+import { Github, ExternalLink, Cpu, Globe, Database, Layers, ArrowUpRight } from 'lucide-react';
+import SectionHeading from './SectionHeading';
 
 interface FlagshipProject {
   id: number;
@@ -16,7 +10,7 @@ interface FlagshipProject {
   role?: string;
   tech: string[];
   description: string;
-  links: ProjectLinks;
+  links: { github: string; live: string };
   icon: React.ReactNode;
 }
 
@@ -28,233 +22,215 @@ interface ArchiveProject {
   link: string;
 }
 
-// --- DATA: FLAGSHIP PROJECTS (Top Tier) ---
 const FLAGSHIP_PROJECTS: FlagshipProject[] = [
   {
     id: 1,
-    title: "Enterprise Event Management System",
-    status: "Flagship",
-    tech: ["Java 21", "Spring Boot 3.2", "Apache Kafka", "Redis", "PostgreSQL", "Microservices"],
-    description: "A production-grade distributed system designed to handle 5,000+ concurrent users. Features an event-driven architecture with Kafka for asynchronous processing, Redis for millisecond-latency caching, and a QR-based real-time check-in system preventing fraud.",
-    links: { github: "#", live: "#" },
-    icon: <Cpu size={24} className="text-cyan-400" />
+    title: 'Enterprise Event Management System',
+    status: 'Flagship',
+    tech: ['Java 21', 'Spring Boot 3.2', 'Apache Kafka', 'Redis', 'PostgreSQL', 'Microservices'],
+    description:
+      'A production-grade distributed system designed to handle 5,000+ concurrent users. Event-driven architecture with Kafka for async processing, Redis for millisecond-latency caching, and a QR-based real-time check-in system preventing fraud.',
+    links: { github: '#', live: '#' },
+    icon: <Cpu size={22} className="text-accent-light" />,
   },
   {
     id: 2,
-    title: "UniSync",
-    role: "CodeSprint X Semifinalist",
-    status: "In Dev",
-    tech: ["React.js", "Spring Boot", "PostgreSQL", "Microservices Planned"],
-    description: "A comprehensive campus life platform connecting students. Selected as a Semifinalist at IIT's CodeSprint X. Currently transitioning from monolithic to microservice architecture to scale user interactions.",
-    links: { github: "#", live: "#" },
-    icon: <Globe size={24} className="text-blue-400" />
+    title: 'UniSync',
+    role: 'CodeSprint X Semifinalist',
+    status: 'In Dev',
+    tech: ['React.js', 'Spring Boot', 'PostgreSQL', 'Microservices Planned'],
+    description:
+      'A comprehensive campus life platform connecting students. Selected as a Semifinalist at IIT\u2019s CodeSprint X. Currently transitioning from monolithic to microservice architecture to scale user interactions.',
+    links: { github: '#', live: '#' },
+    icon: <Globe size={22} className="text-sky-glow" />,
   },
   {
     id: 3,
-    title: "RIS Model Predicting Algorithm",
-    status: "Research",
-    tech: ["Python", "Flask", "SciPy", "Machine Learning", "Data Modeling"],
-    description: "An end-to-end epidemiological solution forecasting avian disease spread using the SIR (Susceptible-Infected-Recovered) model. Features a CLI predictor and a Flask web dashboard for real-time visualization of infection trajectories.",
-    links: { github: "#", live: "#" },
-    icon: <Database size={24} className="text-green-400" />
+    title: 'RIS Model Predicting Algorithm',
+    status: 'Research',
+    tech: ['Python', 'Flask', 'SciPy', 'Machine Learning', 'Data Modeling'],
+    description:
+      'An end-to-end epidemiological solution forecasting avian disease spread using the SIR model. Features a CLI predictor and a Flask web dashboard for real-time visualization of infection trajectories.',
+    links: { github: '#', live: '#' },
+    icon: <Database size={22} className="text-emerald-400" />,
   },
   {
     id: 4,
-    title: "Luna Rest: Sleep Tracking System",
-    status: "AI/ML",
-    tech: ["Machine Learning", "React", "Spring Boot", "Wearable Integration"],
-    description: "AI-powered platform predicting sleep quality (1-10 scale) for undergraduates. Integrates with wearables to provide personalized recommendations and study schedule optimization based on rest data.",
-    links: { github: "#", live: "#" },
-    icon: <Layers size={24} className="text-purple-400" />
-  }
+    title: 'Luna Rest: Sleep Tracking System',
+    status: 'AI / ML',
+    tech: ['Machine Learning', 'React', 'Spring Boot', 'Wearable Integration'],
+    description:
+      'AI-powered platform predicting sleep quality (1\u201310 scale) for undergraduates. Integrates with wearables to provide personalized recommendations and study schedule optimization based on rest data.',
+    links: { github: '#', live: '#' },
+    icon: <Layers size={22} className="text-iris" />,
+  },
 ];
 
-// --- DATA: ARCHIVE PROJECTS (Compact) ---
 const ARCHIVE_PROJECTS: ArchiveProject[] = [
   {
     id: 5,
     title: "J'Pythors Data Analytics",
-    desc: "NLP & Data Viz case study using Hugging Face models and Plotly Dash.",
-    tech: ["Python", "Pandas", "NLP", "Dash"],
-    link: "https://github.com/rusirasandul/J-Pythors-"
+    desc: 'NLP & Data Viz case study using Hugging Face models and Plotly Dash.',
+    tech: ['Python', 'Pandas', 'NLP', 'Dash'],
+    link: 'https://github.com/rusirasandul/J-Pythors-',
   },
   {
     id: 6,
-    title: "Real-Time Ticketing System",
-    desc: "Event ticketing simulation using Producer-Consumer pattern.",
-    tech: ["Java", "Angular", "Concurrency"],
-    link: "https://github.com/rusirasandul/Real-Time-Ticket-management-Syatem"
+    title: 'Real-Time Ticketing System',
+    desc: 'Event ticketing simulation using the Producer-Consumer pattern.',
+    tech: ['Java', 'Angular', 'Concurrency'],
+    link: 'https://github.com/rusirasandul/Real-Time-Ticket-management-Syatem',
   },
   {
     id: 7,
-    title: "Plane Management System",
-    desc: "Java CLI application for booking seats and managing flight data.",
-    tech: ["Java", "OOP", "File Handling"],
-    link: "https://github.com/rusirasandul/Plane-Manegement-IIT"
+    title: 'Plane Management System',
+    desc: 'Java CLI application for booking seats and managing flight data.',
+    tech: ['Java', 'OOP', 'File Handling'],
+    link: 'https://github.com/rusirasandul/Plane-Manegement-IIT',
   },
   {
     id: 8,
-    title: "Personal Portfolio v1",
-    desc: "Responsive portfolio site built for Client-Side Development module.",
-    tech: ["HTML5", "CSS3", "JavaScript"],
-    link: "https://github.com/rusirasandul/Portfolio"
+    title: 'Personal Portfolio v1',
+    desc: 'Responsive portfolio site built for the Client-Side Development module.',
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    link: 'https://github.com/rusirasandul/Portfolio',
   },
   {
     id: 9,
-    title: "Sustainable Energy Site",
-    desc: "Group project website focusing on eco-friendly energy solutions.",
-    tech: ["HTML", "CSS", "JS"],
-    link: "https://github.com/rusirasandul/Shop-Website"
+    title: 'Sustainable Energy Site',
+    desc: 'Group project website focusing on eco-friendly energy solutions.',
+    tech: ['HTML', 'CSS', 'JS'],
+    link: 'https://github.com/rusirasandul/Shop-Website',
   },
   {
     id: 10,
-    title: "Academic Credit Predictor",
-    desc: "Python utility to calculate credits based on student marks.",
-    tech: ["Python", "Logic"],
-    link: "#"
-  }
+    title: 'Academic Credit Predictor',
+    desc: 'Python utility to calculate credits based on student marks.',
+    tech: ['Python', 'Logic'],
+    link: '#',
+  },
 ];
 
-interface FlagshipCardProps {
-  project: FlagshipProject;
-  index: number;
-}
-
-// --- COMPONENT: FLAGSHIP CARD (Big) ---
-const FlagshipCard: React.FC<FlagshipCardProps> = ({ project, index }) => (
+const FlagshipCard: React.FC<{ project: FlagshipProject; index: number }> = ({
+  project,
+  index,
+}) => (
   <motion.div
-    initial={{ opacity: 0, y: 20 }}
+    initial={{ opacity: 0, y: 24 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ delay: index * 0.1 }}
-    className="group relative bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
+    viewport={{ once: true, margin: '-60px' }}
+    transition={{ duration: 0.5, delay: index * 0.08 }}
+    className="group relative overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.02] p-7 transition-all duration-300 hover:border-accent/30"
   >
-    {/* Hover Glow */}
-    <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+    <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
     <div className="relative z-10">
-      <div className="flex justify-between items-start mb-6">
-        <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 group-hover:border-cyan-500/30 transition-colors">
+      <div className="mb-5 flex items-start justify-between">
+        <div className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.03] transition-colors group-hover:border-accent/30">
           {project.icon}
         </div>
-        <span className="px-3 py-1 text-xs font-mono font-bold text-cyan-400 bg-cyan-950/30 rounded-full border border-cyan-900/50">
+        <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 font-mono text-xs font-semibold text-accent-light">
           {project.role || project.status}
         </span>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-100 mb-3 group-hover:text-cyan-400 transition-colors">
+      <h3 className="font-display text-xl font-bold text-white transition-colors group-hover:text-accent-light">
         {project.title}
       </h3>
-      
-      <p className="text-slate-400 mb-6 leading-relaxed">
-        {project.description}
-      </p>
+      <p className="mt-3 text-sm leading-relaxed text-zinc-400">{project.description}</p>
 
-      {/* Tech Stack Pills */}
-      <div className="flex flex-wrap gap-2 mb-8">
-        {project.tech.map(t => (
-          <span key={t} className="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700/50">
-            {t}
-          </span>
+      <div className="mt-5 flex flex-wrap gap-2">
+        {project.tech.map((t) => (
+          <span key={t} className="chip">{t}</span>
         ))}
       </div>
 
-      {/* Links */}
-      <div className="flex gap-4">
-        <a href={project.links.github} className="flex items-center gap-2 text-sm font-semibold text-slate-300 hover:text-cyan-400 transition-colors">
-          <Github size={18} /> Code
+      <div className="mt-6 flex gap-5 border-t border-white/[0.06] pt-5">
+        <a
+          href={project.links.github}
+          className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-300 transition-colors hover:text-accent-light"
+        >
+          <Github size={17} /> Code
         </a>
-        <a href={project.links.live} className="flex items-center gap-2 text-sm font-semibold text-slate-300 hover:text-cyan-400 transition-colors">
-          <ExternalLink size={18} /> Live Demo
+        <a
+          href={project.links.live}
+          className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-300 transition-colors hover:text-accent-light"
+        >
+          <ExternalLink size={17} /> Live Demo
         </a>
       </div>
     </div>
   </motion.div>
 );
 
-interface ArchiveCardProps {
-  project: ArchiveProject;
-  index: number;
-}
-
-// --- COMPONENT: ARCHIVE CARD (Compact) ---
-const ArchiveCard: React.FC<ArchiveCardProps> = ({ project, index }) => (
-  <motion.div
-    initial={{ opacity: 0, scale: 0.95 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ delay: index * 0.05 }}
+const ArchiveCard: React.FC<{ project: ArchiveProject; index: number }> = ({
+  project,
+  index,
+}) => (
+  <motion.a
+    href={project.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    initial={{ opacity: 0, y: 16 }}
+    whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    className="bg-slate-900/50 border border-slate-800 p-5 rounded-lg hover:bg-slate-800 transition-colors group"
+    transition={{ duration: 0.4, delay: index * 0.05 }}
+    className="group glass glass-hover flex flex-col rounded-2xl p-5"
   >
-    <div className="flex justify-between items-start mb-2">
-      <h4 className="font-bold text-slate-200 group-hover:text-cyan-400 transition-colors">
+    <div className="mb-2 flex items-start justify-between gap-2">
+      <h4 className="font-display font-semibold text-zinc-100 transition-colors group-hover:text-accent-light">
         {project.title}
       </h4>
-      <a href={project.link} className="text-slate-600 hover:text-cyan-400 transition-colors" aria-label={`View ${project.title} on GitHub`}>
-        <Github size={16} />
-      </a>
+      <ArrowUpRight
+        size={16}
+        className="shrink-0 text-zinc-600 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent-light"
+      />
     </div>
-    <p className="text-sm text-slate-500 mb-3 line-clamp-2">{project.desc}</p>
-    <div className="flex flex-wrap gap-2">
-      {project.tech.map(t => (
-        <span key={t} className="text-[10px] px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">
+    <p className="mb-4 line-clamp-2 text-sm text-zinc-500">{project.desc}</p>
+    <div className="mt-auto flex flex-wrap gap-1.5">
+      {project.tech.map((t) => (
+        <span
+          key={t}
+          className="rounded-md border border-white/[0.06] bg-white/[0.02] px-2 py-0.5 text-[11px] text-zinc-400"
+        >
           {t}
         </span>
       ))}
     </div>
-  </motion.div>
+  </motion.a>
 );
 
 const Projects: React.FC = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section className="py-24 bg-slate-950 text-slate-200 relative overflow-hidden hexagon-bg" id="projects">
-      
-      {/* Background Grid Decoration */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none"></div>
+    <section id="projects" className="section relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-grid-faint bg-[size:46px_46px] [mask-image:radial-gradient(ellipse_50%_40%_at_50%_0%,#000_60%,transparent_100%)] opacity-50" />
 
-      <div className="container-width max-w-7xl relative z-10">
-        
-        {/* Header */}
-        <div className="mb-16">
-          <motion.h2 
-            ref={ref}
-            initial={{ opacity: 0, x: -20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold mb-4 flex items-center gap-4"
-          >
-            <Folder className="text-cyan-400" size={40} />
-            System <span className="text-slate-600">Protocols</span>
-          </motion.h2>
-          <p className="text-slate-400 text-lg max-w-2xl">
-            A collection of deployed systems, research algorithms, and architectural experiments.
-          </p>
-        </div>
+      <div className="container-width">
+        <SectionHeading
+          eyebrow="Selected Work"
+          title={<>Things I&apos;ve <span className="text-gradient">designed &amp; built</span></>}
+          description="A collection of deployed systems, research algorithms, and architectural experiments."
+        />
 
-        {/* --- SECTION 1: FLAGSHIP GRID --- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {FLAGSHIP_PROJECTS.map((project, index) => (
             <FlagshipCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
-        {/* --- SECTION 2: ARCHIVES HEADER --- */}
-        <div className="flex items-center gap-4 mb-8">
-          <div className="h-px bg-slate-800 flex-1"></div>
-          <span className="text-slate-500 font-mono text-sm uppercase tracking-widest">Development Archives</span>
-          <div className="h-px bg-slate-800 flex-1"></div>
+        <div className="my-12 flex items-center gap-4">
+          <div className="h-px flex-1 bg-white/[0.08]" />
+          <span className="font-mono text-xs uppercase tracking-[0.25em] text-zinc-500">
+            Development Archives
+          </span>
+          <div className="h-px flex-1 bg-white/[0.08]" />
         </div>
 
-        {/* --- SECTION 3: ARCHIVES GRID --- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {ARCHIVE_PROJECTS.map((project, index) => (
             <ArchiveCard key={project.id} project={project} index={index} />
           ))}
         </div>
-
       </div>
     </section>
   );

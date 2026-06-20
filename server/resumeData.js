@@ -3,7 +3,7 @@ const RESUME_DATA = `
 PROFILE:
 Name: Rusira Sandul
 Role: Software Engineer & Computer Science Undergraduate
-Education: Pursuing dual degrees - BSc (Hons) in Computer Science at University of Westminster (via IIT Sri Lanka) and BSc in Information Technology at University of Sri Jayewardenepura
+Education: Pursuing dual degrees - BSc (Hons) in Computer Science at University of Westminster (via IIT Sri Lanka) and BSc in Physical Science at University of Sri Jayewardenepura
 School: Rahula College
 Current Focus: AI/ML Integration, Full-Stack Development, Cloud Architecture, Cyber Security, DevOps Engineering
 
@@ -20,8 +20,8 @@ EDUCATION:
 1. University of Westminster (via IIT Sri Lanka) - BSc (Hons) in Computer Science (2023 - Present)
    Pursuing internationally recognized degree through dual-degree program. Focus areas: Software Engineering, AI/ML, Cloud Computing.
 
-2. University of Sri Jayewardenepura - BSc in Information Technology (2022 - Present)
-   Core coursework in database systems, network engineering, and software development methodologies.
+2. University of Sri Jayewardenepura - BSc in Physical Science (2022 - Present)
+   Concurrent degree providing a strong foundation in Mathematics, Physics, and Applied Sciences.
 
 3. Rahula College - Secondary Education (Completed)
    Strong foundation in Mathematics and Computer Science.
@@ -170,7 +170,7 @@ TECHNICAL DNA:
 - Interests: Game Development, Cyber Security, Network Engineering, System Design
 
 BACKGROUND & PHILOSOPHY:
-Mr. Sandul is pursuing a unique dual-degree path, simultaneously earning BSc (Hons) in Computer Science from University of Westminster and BSc in Information Technology from University of Sri Jayewardenepura. This ambitious academic journey reflects his commitment to comprehensive knowledge in software engineering.
+Mr. Sandul is pursuing a unique dual-degree path, simultaneously earning BSc (Hons) in Computer Science from University of Westminster and BSc in Physical Science from University of Sri Jayewardenepura. This ambitious academic journey reflects his commitment to comprehensive knowledge in software engineering.
 
 He specializes in full-stack development with the MERN stack and has a strong passion for AI/ML integration, cloud architecture, and cybersecurity. His experience spans from building enterprise-scale event management systems to healthcare applications, demonstrating versatility across domains.
 

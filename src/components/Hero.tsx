@@ -1,180 +1,182 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
-import HeroRoboBackground from './HeroRoboBackground';
-import StarkTechBackground from './StarkTechBackground';
+import { Github, Linkedin, Mail, Twitter, ArrowDown, ArrowUpRight, Download } from 'lucide-react';
+import HeroRobot from './HeroRobot';
+
+const FOCUS_AREAS = [
+  'AI Engineering',
+  'Cyber Security',
+  'Full-Scale Applications',
+  'Project Management',
+  'Cloud Architecture',
+  'DevOps Engineering',
+];
+
+const SOCIALS = [
+  { icon: Github, href: 'https://github.com/rusirasandul', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/rusira-sandul-b6bb87292', label: 'LinkedIn' },
+  { icon: Mail, href: 'mailto:rusirasandulhw@gmail.com', label: 'Email' },
+  { icon: Twitter, href: 'https://x.com/RusiraS64320', label: 'X (Twitter)' },
+];
+
+const CV_URL =
+  'https://drive.google.com/file/d/1fKUmOiahHyCtY5J0KmwEKH05yOmuFUSd/view?usp=sharing';
+
+const STATS = [
+  { value: '2x', label: 'Concurrent Degrees' },
+  { value: '10+', label: 'Shipped Projects' },
+  { value: '7+', label: 'Leadership Roles' },
+];
 
 const Hero = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const focusAreas = [
-    "AI Engineer",
-    "Cyber Security",
-    "Full Scale Software Application",
-    "Project Management",
-    "Cloud Architecture",
-    "DevOps Engineering",
-    "Software Development"
-  ];
-
   const [currentFocus, setCurrentFocus] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFocus((prev) => (prev + 1) % focusAreas.length);
-    }, 2000);
-
+    const interval = setInterval(
+      () => setCurrentFocus((prev) => (prev + 1) % FOCUS_AREAS.length),
+      2200
+    );
     return () => clearInterval(interval);
-  }, [focusAreas.length]);
+  }, []);
+
+  const scrollToSection = (id: string) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center section-padding pt-32 overflow-hidden">
-      {/* 1. The Stark Tech Background (Deepest Layer) */}
-      <StarkTechBackground />
-      
-      {/* 2. Robot Background (Middle Layer) */}
-      <HeroRoboBackground />
-      
-      <div className="container-width relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            {/* HUD Badge */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="inline-block mb-4 px-3 py-1 border border-cyan-500/30 rounded-full bg-cyan-950/30 backdrop-blur-md"
-            >
-              <span className="text-cyan-400 text-xs font-mono tracking-widest">EST. 2026 // STARK PROTOCOLS</span>
-            </motion.div>
-            
-            <motion.h1
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
-            >
-              Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 filter drop-shadow-[0_0_10px_rgba(6,182,212,0.5)]">Rusira Sandul</span>
-            </motion.h1>
-            
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="text-xl md:text-2xl text-slate-400 mb-8 leading-relaxed"
-            >
-              I build scalable software and explore the intersection of <span className="text-amber-500 font-semibold">AI</span> and Engineering.
-            </motion.p>
-
-            {/* Social Media Badges */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.45 }}
-              className="flex gap-4 mb-8"
-            >
-              <a
-                href="https://github.com/rusirasandul"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-110"
-                aria-label="GitHub"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/rusira-sandul-b6bb87292"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-110"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a
-                href="mailto:rusirasandulhw@gmail.com"
-                className="w-12 h-12 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-110"
-                aria-label="Email"
-              >
-                <Mail size={24} />
-              </a>
-              <a
-                href="https://twitter.com/rusirasandul"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-110"
-                aria-label="Twitter"
-              >
-                <Twitter size={24} />
-              </a>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="flex flex-wrap gap-4"
-            >
-              {/* Iron Man Styled Buttons */}
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="px-8 py-3 rounded-none skew-x-[-10deg] bg-cyan-600 hover:bg-cyan-500 text-white font-bold transition-all shadow-[0_0_20px_rgba(8,145,178,0.6)] border border-cyan-400"
-              >
-                <span className="skew-x-[10deg] inline-block">View Work</span>
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="px-8 py-3 rounded-none skew-x-[-10deg] border border-cyan-500/50 text-cyan-400 hover:bg-cyan-950/50 transition-all hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]"
-              >
-                <span className="skew-x-[10deg] inline-block">Contact Me</span>
-              </button>
-              <a
-                href="https://drive.google.com/file/d/1fKUmOiahHyCtY5J0KmwEKH05yOmuFUSd/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-3 bg-slate-800 border-2 border-slate-700 text-slate-200 hover:bg-slate-700 hover:border-accent font-semibold rounded-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                Download CV
-              </a>
-            </motion.div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden md:block"
-          >
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-8 min-h-[200px] flex items-center justify-center">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentFocus}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
-                  className="text-center"
-                >
-                  <p className="text-slate-500 text-sm mb-2 font-mono">Focus on</p>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white">
-                    {focusAreas[currentFocus]}
-                  </h3>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-          </motion.div>
-        </div>
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-5 pt-28 pb-16 sm:px-8">
+      {/* Ambient background */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-grid-faint bg-[size:46px_46px] [mask-image:radial-gradient(ellipse_60%_55%_at_50%_40%,#000_55%,transparent_100%)]" />
+        <div className="absolute left-1/2 top-[-10%] h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-accent/20 blur-[130px] animate-float-slow" />
+        <div className="absolute right-[8%] top-[30%] h-[320px] w-[320px] rounded-full bg-iris/15 blur-[120px] animate-float" />
+        <div className="absolute left-[6%] bottom-[8%] h-[300px] w-[300px] rounded-full bg-sky-glow/10 blur-[120px]" />
       </div>
+
+      {/* Interactive robot tucked into the corner */}
+      <HeroRobot />
+
+      <div className="container-width relative z-10 flex flex-col items-center text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs font-medium text-zinc-300 backdrop-blur-md"
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+          </span>
+          Available for opportunities &amp; collaborations
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          className="max-w-4xl text-balance text-5xl font-bold leading-[1.05] sm:text-6xl md:text-7xl"
+        >
+          Hi, I&apos;m <span className="text-gradient">Rusira Sandul</span>
+        </motion.h1>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.12 }}
+          className="mt-5 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xl text-zinc-400 sm:text-2xl"
+        >
+          <span>I build software focused on</span>
+          <span className="inline-flex h-8 items-center overflow-hidden">
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={currentFocus}
+                initial={{ y: 18, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -18, opacity: 0 }}
+                transition={{ duration: 0.35 }}
+                className="font-display font-semibold text-accent-light"
+              >
+                {FOCUS_AREAS[currentFocus]}
+              </motion.span>
+            </AnimatePresence>
+          </span>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.18 }}
+          className="mt-6 max-w-2xl text-balance text-base leading-relaxed text-zinc-400 sm:text-lg"
+        >
+          A Computer Science undergraduate on a rare double-degree path, exploring the
+          intersection of <span className="text-zinc-200">AI</span>, full-stack engineering,
+          and <span className="text-zinc-200">cyber security</span>.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.24 }}
+          className="mt-9 flex flex-wrap items-center justify-center gap-3"
+        >
+          <button onClick={() => scrollToSection('projects')} className="btn-primary">
+            View My Work
+            <ArrowUpRight size={17} />
+          </button>
+          <button onClick={() => scrollToSection('contact')} className="btn-ghost">
+            Get in Touch
+          </button>
+          <a href={CV_URL} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+            <Download size={16} />
+            Résumé
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.32 }}
+          className="mt-8 flex items-center gap-3"
+        >
+          {SOCIALS.map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/[0.03] text-zinc-400 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:text-accent-light"
+            >
+              <Icon size={19} />
+            </a>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-14 grid w-full max-w-xl grid-cols-3 divide-x divide-white/10 rounded-2xl glass py-5"
+        >
+          {STATS.map((s) => (
+            <div key={s.label} className="px-2">
+              <div className="font-display text-2xl font-bold text-white sm:text-3xl">
+                {s.value}
+              </div>
+              <div className="mt-1 text-[11px] uppercase tracking-wider text-zinc-500 sm:text-xs">
+                {s.label}
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+
+      <button
+        onClick={() => scrollToSection('about')}
+        aria-label="Scroll to about"
+        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 animate-bounce text-zinc-500 transition-colors hover:text-accent-light md:block"
+      >
+        <ArrowDown size={22} />
+      </button>
     </section>
   );
 };

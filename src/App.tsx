@@ -12,16 +12,18 @@ import JarvisBot from './components/JarvisBot';
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="relative min-h-screen overflow-x-hidden">
       <Navbar />
-      <Hero />
-      <About />
-      <Education />
-      <Experience />
-      <Projects />
-      <Achievements />
-      <Skills />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Education />
+        <Experience />
+        <Projects />
+        <Achievements />
+        <Skills />
+        <Contact />
+      </main>
       <Footer />
       <JarvisBot />
     </div>

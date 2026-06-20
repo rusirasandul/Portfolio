@@ -1,75 +1,70 @@
 import { motion } from 'framer-motion';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, ExternalLink } from 'lucide-react';
+import SectionHeading from './SectionHeading';
 
-// --- YOUR LINKEDIN POST IDs (Extracted from URLs) ---
 const POST_IDS = [
-  "7418240089471778816", // AlgoArena 2025
-  "7391081779711033344", // Aurora 2025
-  "7365634360898695169", // Beauty of Cloud Hackathon
-  "7328475828961378304", // IEEE USJ
-  "7308171524920745984", // Pixel Event
-  "7306509454324219905", // Cyber Summit 25
-  "7299672042600046592", // Data Science & ML
-  "7297098846801641472", // Postman API
-  "7296970439954767872", // Pixel Event 2
+  '7418240089471778816',
+  '7391081779711033344',
+  '7365634360898695169',
+  '7328475828961378304',
+  '7308171524920745984',
+  '7306509454324219905',
+  '7299672042600046592',
+  '7297098846801641472',
+  '7296970439954767872',
 ];
+
+const LinkedInEmbedCard = ({ id, index }: { id: string; index: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 24 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
+    viewport={{ once: true }}
+    className="overflow-hidden rounded-2xl border border-white/[0.08] bg-white shadow-card transition-all duration-300 hover:border-sky-glow/40 hover:shadow-glow-sm"
+  >
+    <iframe
+      src={`https://www.linkedin.com/embed/feed/update/urn:li:activity:${id}`}
+      height="550"
+      width="100%"
+      frameBorder="0"
+      allowFullScreen
+      title={`LinkedIn post ${id}`}
+      className="h-[550px] w-full"
+    />
+  </motion.div>
+);
 
 const Achievements = () => {
   return (
-    <section id="achievements" className="py-20 bg-slate-950 text-slate-200 relative overflow-hidden hexagon-bg">
-      
-      {/* LinkedIn Blue Glow */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#0077b5]/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <section id="achievements" className="section relative overflow-hidden">
+      <div className="pointer-events-none absolute left-0 top-1/4 -z-10 h-96 w-96 rounded-full bg-sky-glow/10 blur-[130px]" />
 
-      <div className="container mx-auto px-6 relative z-10 max-w-7xl">
-        
-        {/* Header */}
-        <div className="mb-16 flex items-center gap-4">
-          <div className="p-3 bg-slate-900 rounded-xl border border-slate-800 shadow-[0_0_15px_rgba(0,119,181,0.2)]">
-            <Linkedin size={32} className="text-[#0077b5]" />
-          </div>
-          <div>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-100">
-              Live <span className="text-[#0077b5]">Feed</span>
-            </h2>
-            <p className="text-slate-400 mt-2">
-              Recent updates and achievements from my professional network
-            </p>
-          </div>
+      <div className="container-width">
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <SectionHeading
+            eyebrow="Live Feed"
+            title={<>Latest from my <span className="text-gradient">network</span></>}
+            description="Recent updates, achievements, and highlights from my professional journey."
+          />
+          <a
+            href="https://www.linkedin.com/in/rusira-sandul-b6bb87292"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mb-12 inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.03] px-4 py-2 text-sm font-semibold text-zinc-200 transition-all hover:border-sky-glow/50 hover:text-sky-glow"
+          >
+            <Linkedin size={16} />
+            Follow on LinkedIn
+            <ExternalLink size={14} />
+          </a>
         </div>
 
-        {/* Grid of LinkedIn Embeds */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {POST_IDS.map((id, index) => (
             <LinkedInEmbedCard key={id} id={id} index={index} />
           ))}
         </div>
-
       </div>
     </section>
-  );
-};
-
-// Smart Component that builds the LinkedIn embed URL
-const LinkedInEmbedCard = ({ id, index }: { id: string; index: number }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.15 }}
-      viewport={{ once: true }}
-      className="rounded-xl overflow-hidden shadow-lg border border-slate-800 bg-white hover:shadow-[0_0_20px_rgba(0,119,181,0.3)] transition-all"
-    >
-      <iframe 
-        src={`https://www.linkedin.com/embed/feed/update/urn:li:activity:${id}`}
-        height="550"
-        width="100%" 
-        frameBorder="0" 
-        allowFullScreen
-        title={`LinkedIn post ${id}`}
-        className="w-full h-[550px]"
-      />
-    </motion.div>
   );
 };
 
