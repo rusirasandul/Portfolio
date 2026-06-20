@@ -29,7 +29,7 @@ const HeroRobot = () => {
       initial={{ opacity: 0, y: 30, scale: 0.9 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
-      className="pointer-events-none absolute bottom-0 left-0 z-[2] hidden select-none md:block"
+      className="pointer-events-none absolute bottom-0 left-0 z-[2] hidden select-none lg:block"
     >
       {/* ambient glow behind robot */}
       <div className="absolute bottom-6 left-6 h-44 w-44 rounded-full bg-accent/25 blur-[80px]" />

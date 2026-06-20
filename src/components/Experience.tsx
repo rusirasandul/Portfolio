@@ -192,12 +192,12 @@ const Experience: React.FC = () => {
             title={<>Where I&apos;ve <span className="text-gradient">made impact</span></>}
           />
 
-          <div className="relative mb-12 flex rounded-full border border-white/10 bg-white/[0.03] p-1">
+          <div className="relative mb-8 flex w-full rounded-full border border-white/10 bg-white/[0.03] p-1 sm:mb-12 sm:w-auto">
             {TABS.map(({ id, label, icon: Icon }) => (
               <button
                 key={id}
                 onClick={() => setActiveTab(id)}
-                className={`relative z-10 inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
+                className={`relative z-10 inline-flex flex-1 items-center justify-center gap-2 rounded-full px-5 py-2 text-sm font-semibold transition-colors sm:flex-initial ${
                   activeTab === id ? 'text-white' : 'text-zinc-400 hover:text-zinc-200'
                 }`}
               >

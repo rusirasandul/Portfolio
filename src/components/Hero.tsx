@@ -60,9 +60,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs font-medium text-zinc-300 backdrop-blur-md"
+          className="mb-6 inline-flex max-w-[92vw] items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-[11px] font-medium text-zinc-300 backdrop-blur-md sm:px-4 sm:text-xs"
         >
-          <span className="relative flex h-2 w-2">
+          <span className="relative flex h-2 w-2 shrink-0">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
           </span>
@@ -73,7 +73,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.05 }}
-          className="max-w-4xl text-balance text-5xl font-bold leading-[1.05] sm:text-6xl md:text-7xl"
+          className="max-w-4xl text-balance text-4xl font-bold leading-[1.08] sm:text-6xl md:text-7xl"
         >
           Hi, I&apos;m <span className="text-gradient">Rusira Sandul</span>
         </motion.h1>
@@ -82,10 +82,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.12 }}
-          className="mt-5 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xl text-zinc-400 sm:text-2xl"
+          className="mt-4 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-lg text-zinc-400 sm:mt-5 sm:text-2xl"
         >
           <span>I build software focused on</span>
-          <span className="inline-flex h-8 items-center overflow-hidden">
+          <span className="inline-flex h-7 items-center overflow-hidden sm:h-8">
             <AnimatePresence mode="wait">
               <motion.span
                 key={currentFocus}
@@ -105,7 +105,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.18 }}
-          className="mt-6 max-w-2xl text-balance text-base leading-relaxed text-zinc-400 sm:text-lg"
+          className="mt-5 max-w-2xl text-balance text-sm leading-relaxed text-zinc-400 sm:mt-6 sm:text-lg"
         >
           A Computer Science undergraduate on a rare double-degree path, exploring the
           intersection of <span className="text-zinc-200">AI</span>, full-stack engineering,
@@ -155,14 +155,14 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-14 grid w-full max-w-xl grid-cols-3 divide-x divide-white/10 rounded-2xl glass py-5"
+          className="mt-10 grid w-full max-w-xl grid-cols-3 divide-x divide-white/10 rounded-2xl glass py-4 sm:mt-14 sm:py-5"
         >
           {STATS.map((s) => (
-            <div key={s.label} className="px-2">
-              <div className="font-display text-2xl font-bold text-white sm:text-3xl">
+            <div key={s.label} className="px-1.5 sm:px-2">
+              <div className="font-display text-xl font-bold text-white sm:text-3xl">
                 {s.value}
               </div>
-              <div className="mt-1 text-[11px] uppercase tracking-wider text-zinc-500 sm:text-xs">
+              <div className="mt-1 text-[10px] uppercase tracking-wider text-zinc-500 sm:text-xs">
                 {s.label}
               </div>
             </div>

@@ -56,7 +56,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col justify-between gap-8 rounded-3xl border border-white/[0.08] bg-gradient-to-br from-white/[0.04] to-transparent p-8"
+            className="glass flex flex-col justify-between gap-8 rounded-3xl p-8"
           >
             <div>
               <h3 className="font-display text-2xl font-semibold text-white">
@@ -131,7 +131,7 @@ const Contact = () => {
                   required
                   rows={6}
                   placeholder="Tell me about your idea..."
-                  className="w-full resize-none rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-zinc-100 placeholder-zinc-600 outline-none transition-colors focus:border-accent/50 focus:bg-white/[0.05]"
+                  className="glass-input resize-none"
                 />
               </div>
 
@@ -173,7 +173,7 @@ const Field: React.FC<FieldProps> = ({ label, name, type = 'text', value, onChan
       onChange={onChange}
       required
       placeholder={label}
-      className="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-zinc-100 placeholder-zinc-600 outline-none transition-colors focus:border-accent/50 focus:bg-white/[0.05]"
+      className="glass-input"
     />
   </div>
 );

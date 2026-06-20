@@ -24,11 +24,11 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
       <span className="h-px w-6 bg-accent-light/60" />
       {eyebrow}
     </span>
-    <h2 className="mt-4 text-balance text-3xl font-bold sm:text-4xl md:text-5xl">
+    <h2 className="mt-4 text-balance text-2xl font-bold leading-tight sm:text-4xl md:text-5xl">
       {title}
     </h2>
     {description && (
-      <p className="mt-4 text-base leading-relaxed text-zinc-400 sm:text-lg">
+      <p className="mt-3 text-sm leading-relaxed text-zinc-400 sm:mt-4 sm:text-base md:text-lg">
         {description}
       </p>
     )}

@@ -120,7 +120,7 @@ const FlagshipCard: React.FC<{ project: FlagshipProject; index: number }> = ({
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: '-60px' }}
     transition={{ duration: 0.5, delay: index * 0.08 }}
-    className="group relative overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.02] p-7 transition-all duration-300 hover:border-accent/30"
+    className="group glass glass-hover relative overflow-hidden rounded-3xl p-7"
   >
     <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
