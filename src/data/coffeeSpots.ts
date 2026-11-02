@@ -3,8 +3,18 @@
 export const COFFEE_CONFIG = {
   ownerName: 'Rusira Sandul',
   ownerEmail: 'rusirasandulhw@gmail.com',
+  /** WhatsApp number in international format (digits only, no '+') for instant booking messages */
+  ownerWhatsApp: '94705170403',
   /** Public direct-access page */
   pageUrl: 'https://rusirasandul.online/coffeewithme',
+  /** Private romantic date page — only viewable with `?invite=<dateInviteCode>` */
+  datePageUrl: 'https://rusirasandul.online/datewithme',
+  /**
+   * Secret invite code required to view `/datewithme`.
+   * Share the full link: https://rusirasandul.online/datewithme?invite=rusira-xoxo
+   * (You can change this code anytime, or add `?for=HerName` to personalise the greeting!)
+   */
+  dateInviteCode: 'rusira-xoxo',
   /**
    * Email relay used to deliver requests (no backend needed).
    * The very first submission sends an activation email to ownerEmail — click it once.
@@ -13,8 +23,11 @@ export const COFFEE_CONFIG = {
   /**
    * Booking API (server/coffee.js on the JARVIS backend). Stores reserved slots
    * so two people can never book overlapping times.
+   * Uses localhost:5000 automatically during `npm run dev`, and Vercel in production.
    */
-  bookingApi: 'https://portfolio-ffqi.vercel.app/api/coffee',
+  bookingApi: import.meta.env.DEV
+    ? 'http://localhost:5000/api/coffee'
+    : 'https://portfolio-ffqi.vercel.app/api/coffee',
   /**
    * Optional: paste a Google Calendar "Appointment schedule" / Calendly link here
    * and a "Book on my calendar" button will appear.

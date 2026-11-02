@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import JarvisBot from './components/JarvisBot';
 import CoffeeFab from './components/coffee/CoffeeFab';
 import CoffeeWithMe from './pages/CoffeeWithMe';
+import DateWithMe from './pages/DateWithMe';
 
 function Home() {
   return (
@@ -51,6 +52,15 @@ function App() {
         element={
           <>
             <CoffeeWithMe />
+            <JarvisBot />
+          </>
+        }
+      />
+      <Route
+        path="/datewithme"
+        element={
+          <>
+            <DateWithMe />
             <JarvisBot />
           </>
         }
