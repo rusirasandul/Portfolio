@@ -1,3 +1,4 @@
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,8 +10,10 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import JarvisBot from './components/JarvisBot';
+import CoffeeFab from './components/coffee/CoffeeFab';
+import CoffeeWithMe from './pages/CoffeeWithMe';
 
-function App() {
+function Home() {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       {/* Ambient color field for the liquid glass to refract */}
@@ -33,8 +36,27 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <CoffeeFab />
       <JarvisBot />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route
+        path="/coffeewithme"
+        element={
+          <>
+            <CoffeeWithMe />
+            <JarvisBot />
+          </>
+        }
+      />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
 

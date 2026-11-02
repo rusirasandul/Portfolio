@@ -170,7 +170,7 @@ const JarvisBot = () => {
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 20, scale: 0.9 }}
             transition={{ type: 'spring', bounce: 0.4, duration: 0.5 }}
-            className="glass absolute bottom-1 right-16 w-[min(15rem,calc(100vw-6rem))] rounded-2xl rounded-br-md bg-ink-900/70 p-3.5 text-left"
+            className="glass absolute bottom-[4.25rem] right-0 w-[min(15rem,calc(100vw-2.5rem))] rounded-2xl rounded-br-md bg-ink-900/70 p-3.5 text-left"
           >
             <div className="flex items-start gap-2">
               <motion.span

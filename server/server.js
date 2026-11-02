@@ -11,6 +11,9 @@ app.use(cors({
   credentials: true
 }));
 app.use(express.json());
+app.set('trust proxy', true);
+// Coffee-meeting bookings (shared availability so slots never double-book)
+app.use('/api/coffee', require('./coffee'));
 
 // Initialize Gemini AI
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
